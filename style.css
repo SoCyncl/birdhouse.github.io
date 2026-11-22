@@ -1,4 +1,10 @@
-:root { --bg: #fff; --ink: #111; --muted: #666; --line: #ddd; color-scheme: light dark; }
+:root {
+  --bg: #fff; --ink: #111; --muted: #666; --line: #ddd; color-scheme: light dark;
+  --header-color: #ba6542;
+  /* Header picture: leave as none for the plain color. To use an image, change it to
+     url("images/header.jpg") (the file path is relative to this style.css). */
+  --header-image: none;
+}
 @media (prefers-color-scheme: dark) {
   :root { --bg: #111; --ink: #eee; --muted: #999; --line: #333; }
 }
@@ -13,13 +19,15 @@ h1 { font-size: 1.75rem; }
 h2 { font-size: 1.2rem; margin-top: 2.5rem; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 
-/* header */
-.site-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .5rem 2rem; padding: 1.25rem; border-bottom: 1px solid var(--line); }
-.brand { font-weight: 600; font-size: 1.1rem; text-decoration: none; }
-.site-header nav { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; }
-.site-header nav a { color: var(--muted); text-decoration: none; }
-.site-header nav a:hover { color: var(--ink); }
-.site-header nav a[aria-current="page"] { color: var(--ink); text-decoration: underline; text-underline-offset: .3em; }
+/* header: solid color behind the text, fading out at the bottom */
+.site-header { position: relative; isolation: isolate; display: flex; flex-direction: column; align-items: center; gap: .75rem; padding: 1.75rem 1.25rem 4.5rem; text-align: center; color: #fff; }
+.site-header::before { content: ""; position: absolute; inset: 0; z-index: -1; background-color: var(--header-color); background-image: var(--header-image); background-size: cover; background-position: center; -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 4rem), transparent); mask-image: linear-gradient(to bottom, #000 calc(100% - 4rem), transparent); }
+.brand { display: flex; flex-direction: column; align-items: center; gap: .75rem; color: #fff; text-decoration: none; font-size: 1.6rem; font-weight: 600; line-height: 1.2; }
+.logo { width: 64px; height: 64px; object-fit: cover; }
+.site-header nav { display: flex; justify-content: center; flex-wrap: wrap; gap: .25rem 1.5rem; }
+.site-header nav a { color: rgba(255, 255, 255, .85); text-decoration: none; }
+.site-header nav a:hover { color: #fff; }
+.site-header nav a[aria-current="page"] { color: #fff; text-decoration: underline; text-underline-offset: .3em; }
 
 main { flex: 1; width: 100%; max-width: 1200px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
 main.narrow { max-width: 680px; }

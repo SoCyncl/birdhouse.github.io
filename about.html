@@ -1,46 +1,89 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>{{YOUR WEBSITE TITLE HERE}}</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="header"></div>
-    <div class="main textPage">
-      <!-- Put the page content here -->
-      <h1>About</h1>
-      <p>
-        Lorem ipsum odor amet, consectetuer adipiscing elit. Ultricies mattis
-        imperdiet neque nam pulvinar at commodo fusce iaculis. Eu consectetur
-        amet euismod pellentesque conubia finibus turpis est. Montes nostra
-        adipiscing nibh facilisis, facilisis nunc. Orci parturient dui
-        condimentum nisl mattis cursus proin. Mus maximus pellentesque eget nam
-        duis montes gravida. Purus nulla nulla tincidunt dictumst lacinia nunc.
-      </p>
-      <p>
-        Consequat egestas habitant penatibus libero; sollicitudin dis laoreet
-        convallis consequat. Dictumst massa vehicula hac conubia ex velit
-        facilisis. Imperdiet ex torquent curae maximus, iaculis consectetur
-        tempus. Tincidunt risus ipsum natoque nostra eget ad aliquam. Tincidunt
-        purus donec venenatis justo; morbi rutrum class. Blandit magnis molestie
-        luctus ex pulvinar nisi. Pulvinar tempus dignissim iaculis magnis
-        lacinia egestas.
-      </p>
-      <h2>Social Media</h2>
-      <ul>
-        <li><a href="">Bsky</a></li>
-        <li><a href="">Pillowfort</a></li>
-        <li><a href="">Mastodon</a></li>
-        <li><a href="">Tumblr</a></li>
-        <li><a href="">Twitter</a></li>
-      </ul>
-      <!-- End of page content -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name – About</title>
+  <meta name="description" content="About the artist.">
+  <meta property="og:title" content="Your Name – About">
+  <meta property="og:description" content="About the artist.">
+  <!-- Link previews (Discord, iMessage, etc.) need a full web address and a jpg or png. Change both. -->
+  <meta property="og:image" content="https://YOUR-SITE-URL/images/illustrations/your-best-piece.jpg">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐦</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER. This is the same on every page: change your name or the links here, then copy it to the other pages.
+       Only the link marked aria-current="page" changes from page to page. -->
+  <header class="site-header">
+    <a class="brand" href="index.html">Your Name</a>
+    <nav>
+        <a href="index.html">Gallery</a>
+        <a href="works.html">Works</a>
+        <a href="commissions.html">Commissions</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>About</h1>
+
+    <div class="about-top">
+      <!-- Delete this img if you don't want a portrait. The layout adjusts. -->
+      <img class="art" src="images/about/portrait.svg" alt="Portrait of Your Name" width="800" height="1000">
+      <div>
+        <p class="intro">One sentence that says who you are and what you make.</p>
+        <p>A few more sentences: where you're from, how you started, what you're working on.</p>
+        <p>Based in Your City. Available for commissions and collaborations.</p>
+      </div>
     </div>
-    <div id="footer"></div>
-    <script src="./scripts/make_header_footer.js" async defer></script>
-  </body>
+
+    <h2>Artist statement</h2>
+    <p>What you care about, what your work is about, and why you make it. A short paragraph is plenty.</p>
+
+    <h2>Tools and materials</h2>
+    <ul>
+      <li>Digital: Clip Studio Paint, Procreate</li>
+      <li>Traditional: pencil, ink, gouache</li>
+      <li>Web: HTML, CSS, JavaScript</li>
+    </ul>
+
+    <h2>Background</h2>
+    <!-- One dt (year) and one dd (what happened) per line. Education, shows, publications, jobs. -->
+    <dl class="timeline">
+      <dt>2026</dt><dd>Started Your Manga Title</dd>
+      <dt>2025</dt><dd>Group show, Gallery Name, City</dd>
+      <dt>2023</dt><dd>Graduated, School Name, Degree</dd>
+    </dl>
+
+    <h2>Currently</h2>
+    <p>What you're working on, reading, or learning right now. Update whenever.</p>
+
+    <h2>Work with me</h2>
+    <p>For paid work, see <a href="commissions.html">commissions</a>. For anything else, <a href="contact.html">get in touch</a>. You can also find me on the sites below.</p>
+  </main>
+
+  <!-- FOOTER. Same on every page. Delete the sites you don't use, add new ones by copying a line. -->
+  <footer class="site-footer">
+    <ul class="socials">
+      <li><a href="https://instagram.com/yourname" rel="me noopener">Instagram</a></li>
+      <li><a href="https://x.com/yourname" rel="me noopener">X</a></li>
+      <li><a href="https://bsky.app/profile/yourname" rel="me noopener">Bluesky</a></li>
+      <li><a href="https://yourname.tumblr.com" rel="me noopener">Tumblr</a></li>
+      <li><a href="https://www.pixiv.net/users/0000" rel="me noopener">Pixiv</a></li>
+      <li><a href="https://www.artstation.com/yourname" rel="me noopener">ArtStation</a></li>
+      <li><a href="https://www.deviantart.com/yourname" rel="me noopener">DeviantArt</a></li>
+      <li><a href="https://youtube.com/@yourname" rel="me noopener">YouTube</a></li>
+      <li><a href="https://ko-fi.com/yourname" rel="me noopener">Ko-fi</a></li>
+      <li><a href="https://patreon.com/yourname" rel="me noopener">Patreon</a></li>
+      <li><a href="https://github.com/SoCyncl" rel="me noopener">GitHub</a></li>
+      <li><a href="mailto:you@example.com">Email</a></li>
+    </ul>
+    <p>&copy; 2026 Your Name. All artwork is mine; please ask before reposting.</p>
+  </footer>
+
+  <script src="scripts/lightbox.js"></script>
+</body>
 </html>

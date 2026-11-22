@@ -1,37 +1,28 @@
-# htmlPortfolio
+# Art portfolio
 
-A template artists can use to create and host their own portfolio websites. This template uses HTML, CSS, and minimal JavaScript.
+Plain HTML, CSS and a little JavaScript. Works on GitHub Pages, no build step.
+All content is written directly in the HTML files.
 
-Users should have a basic understanding of HTML and CSS, however the basic template is very very simple and easy for beginners.
+## Files
+- `index.html`: gallery, with tabs (Illustrations / Sketches / Proof of concept)
+- `works.html`: manga, websites and other projects, with filter buttons
+- `commissions.html`, `about.html`, `contact.html`
+- `style.css`: all styling
+- `scripts/switcher.js`: tabs and filter buttons
+- `scripts/lightbox.js`: click-to-enlarge for any `<img class="art">`
 
-## Quickstart
+## Add art
+1. Put the image in `images/illustrations/`, `images/sketches/` or `images/proof-of-concept/`.
+2. In `index.html`, copy a `<figure>` block into the matching section and change the file name and text.
 
-If you want to begin using this template immediately, you can follow these instructions to customize your portfolio.
+Any image on any page with `class="art"` opens in the viewer, so you can place art anywhere.
 
-1. Upload your art to the 'images' folder
-2. Update the image source links starting on `line 27` of `index.html`
-3. Edit `about.html` by writing about yourself and/or editing the links to show which social media sites you're on
-4. Update the Portfolio title on `line 6` of `index.html` and `about.html`
-5. Update the links and website title on `lines 13-17` in `make_header_footer.html`
-6. Add your name to the footer on `line 22` in `make_header_footer.html`
-7. Upload your website
+## Header and footer
+They're plain HTML at the top and bottom of every page. Edit one, then copy it to the others (in each page only the
+`aria-current="page"` link differs). Your socials are in the footer.
 
-## More Detailed Breakdown
+## Preview locally
+Open `index.html`, or run `python3 -m http.server` here and visit http://localhost:8000.
 
-### HTML Pages
-
-The template has three html pages:
-
-- index.html: shows the "main" gallery function (your website doesn't have to have the gallery on the index page)
-- about.html: shows how text pages look on this template
-- alternateGalleries.html: shows some different options for users who want additional functionality out of their galleries
-
-### CSS
-
-The CSS on this template is extremely minimal- aside from colors and text, all CSS in the file is required for making the pages and gallery format correctly. This means users can play around with additional styling on top of those items, or only edit the simple CSS items.
-
-### JavaScript
-
-This template uses JavaScript for one purpose: generating the header (with title and navigation links) and the footer on each page. This allows users to easily update links on their website by editing one file, instead of editing links of multiple html pages.
-
-Users are encouraged to edit that JavaScript file (especially to add, remove, or edit navigation links). The navigation links will wrap, so put as many links as you'd like, it won't break the site.
+## Forms
+Make two forms at formspree.io (commissions, contact) and paste the IDs into `commissions.html` and `contact.html`.

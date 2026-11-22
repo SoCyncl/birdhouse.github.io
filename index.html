@@ -1,46 +1,113 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>{{YOUR WEBSITE TITLE HERE}}</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body id="top">
-    <div id="header"></div>
-    <div class="main">
-      <p>
-        Any additional text you want on the first page can go here. The gallery
-        styling will auto-place your images based on screen size and how equal
-        the columns are (try making this window bigger and smaller!)
-        <strong>BUT</strong> that means trying to get an image at the top of the
-        second or third column is pretty tricky. Keep that in mind.
-      </p>
-      <p>
-        To see some other gallery options,
-        <a href="alternateGalleries.html">go here</a>.
-      </p>
-      <div class="gallery">
-        <!-- begin putting your images here-->
-        <img src="./images/image1.png" alt="description of image" />
-        <img src="./images/image2.png" alt="description of image" />
-        <img src="./images/image3.png" alt="description of image" />
-        <img src="./images/image4.png" alt="description of image" />
-        <img src="./images/image1.png" alt="description of image" />
-        <img src="./images/image2.png" alt="description of image" />
-        <img src="./images/image1.png" alt="description of image" />
-        <img src="./images/image1.png" alt="description of image" />
-        <img src="./images/image3.png" alt="description of image" />
-        <img src="./images/image1.png" alt="description of image" />
-        <img src="./images/image4.png" alt="description of image" />
-        <!-- end of where you put images-->
-      </div>
-      <a href="#top">Back to Top</a>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name – Gallery</title>
+  <meta name="description" content="Illustrations, sketches and proof of concept work.">
+  <meta property="og:title" content="Your Name – Gallery">
+  <meta property="og:description" content="Illustrations, sketches and proof of concept work.">
+  <!-- Link previews (Discord, iMessage, etc.) need a full web address and a jpg or png. Change both. -->
+  <meta property="og:image" content="https://YOUR-SITE-URL/images/illustrations/your-best-piece.jpg">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐦</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER. This is the same on every page: change your name or the links here, then copy it to the other pages.
+       Only the link marked aria-current="page" changes from page to page. -->
+  <header class="site-header">
+    <a class="brand" href="index.html">Your Name</a>
+    <nav>
+        <a href="index.html" aria-current="page">Gallery</a>
+        <a href="works.html">Works</a>
+        <a href="commissions.html">Commissions</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="visually-hidden">Gallery</h1>
+
+    <!-- TABS. Each data-show must match the data-group of a section below.
+         To add a new gallery: add a button here and a new section with the same name. -->
+    <div class="switcher">
+      <button type="button" data-show="illustrations" aria-pressed="true">Illustrations</button>
+      <button type="button" data-show="sketches">Sketches</button>
+      <button type="button" data-show="proof-of-concept">Proof of concept</button>
     </div>
 
-    <div id="footer"></div>
-    <script src="./scripts/make_header_footer.js" async defer></script>
-  </body>
+    <!-- ADD A PIECE: copy the figure block below and paste it anywhere inside a gallery section.
+         Change the file name, alt text (describe the picture) and caption.
+         width and height are the image's pixel size. Any size works; they just stop the page jumping while it loads.
+         The class "art" is what makes a picture open in the big viewer. You can use it on any image on any page.
+         Optional: add data-full="images/illustrations/big-version.jpg" to the img to show a larger file in the viewer.
+
+      <figure>
+        <img class="art" src="images/illustrations/FILE.jpg" alt="Describe the picture" width="800" height="1000" loading="lazy">
+        <figcaption>Title <span>2026, medium</span></figcaption>
+      </figure>
+    -->
+
+    <section class="gallery" data-group="illustrations">
+      <figure>
+        <img class="art" src="images/illustrations/example-1.svg" alt="Example illustration" width="800" height="1000" loading="lazy">
+        <figcaption>Illustration title <span>2026, digital</span></figcaption>
+      </figure>
+      <figure>
+        <img class="art" src="images/illustrations/example-2.svg" alt="Example illustration" width="1000" height="700" loading="lazy">
+        <figcaption>Illustration title <span>2026, digital</span></figcaption>
+      </figure>
+      <figure>
+        <img class="art" src="images/illustrations/example-3.svg" alt="Example illustration" width="800" height="800" loading="lazy">
+        <figcaption>Illustration title <span>2025, digital</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="gallery" data-group="sketches">
+      <figure>
+        <img class="art" src="images/sketches/example-1.svg" alt="Example sketch" width="800" height="1000" loading="lazy">
+        <figcaption>Sketch title <span>2026, pencil</span></figcaption>
+      </figure>
+      <figure>
+        <img class="art" src="images/sketches/example-2.svg" alt="Example sketch" width="800" height="800" loading="lazy">
+        <figcaption>Sketch title <span>2025, ink on paper</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="gallery" data-group="proof-of-concept">
+      <figure>
+        <img class="art" src="images/proof-of-concept/example-1.svg" alt="Example concept" width="1000" height="700" loading="lazy">
+        <figcaption>Concept title <span>2026, what this concept was testing</span></figcaption>
+      </figure>
+      <figure>
+        <img class="art" src="images/proof-of-concept/example-2.svg" alt="Example concept" width="800" height="1000" loading="lazy">
+        <figcaption>Concept title <span>2026, what this concept was testing</span></figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <!-- FOOTER. Same on every page. Delete the sites you don't use, add new ones by copying a line. -->
+  <footer class="site-footer">
+    <ul class="socials">
+      <li><a href="https://instagram.com/yourname" rel="me noopener">Instagram</a></li>
+      <li><a href="https://x.com/yourname" rel="me noopener">X</a></li>
+      <li><a href="https://bsky.app/profile/yourname" rel="me noopener">Bluesky</a></li>
+      <li><a href="https://yourname.tumblr.com" rel="me noopener">Tumblr</a></li>
+      <li><a href="https://www.pixiv.net/users/0000" rel="me noopener">Pixiv</a></li>
+      <li><a href="https://www.artstation.com/yourname" rel="me noopener">ArtStation</a></li>
+      <li><a href="https://www.deviantart.com/yourname" rel="me noopener">DeviantArt</a></li>
+      <li><a href="https://youtube.com/@yourname" rel="me noopener">YouTube</a></li>
+      <li><a href="https://ko-fi.com/yourname" rel="me noopener">Ko-fi</a></li>
+      <li><a href="https://patreon.com/yourname" rel="me noopener">Patreon</a></li>
+      <li><a href="https://github.com/SoCyncl" rel="me noopener">GitHub</a></li>
+      <li><a href="mailto:you@example.com">Email</a></li>
+    </ul>
+    <p>&copy; 2026 Your Name. All artwork is mine; please ask before reposting.</p>
+  </footer>
+
+  <script src="scripts/switcher.js"></script>
+  <script src="scripts/lightbox.js"></script>
+</body>
 </html>

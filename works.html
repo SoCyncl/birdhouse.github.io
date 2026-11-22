@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name – Works</title>
+  <meta name="description" content="Manga, websites and other projects.">
+  <meta property="og:title" content="Your Name – Works">
+  <meta property="og:description" content="Manga, websites and other projects.">
+  <!-- Link previews (Discord, iMessage, etc.) need a full web address and a jpg or png. Change both. -->
+  <meta property="og:image" content="https://YOUR-SITE-URL/images/illustrations/your-best-piece.jpg">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐦</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER. This is the same on every page: change your name or the links here, then copy it to the other pages.
+       Only the link marked aria-current="page" changes from page to page. -->
+  <header class="site-header">
+    <a class="brand" href="index.html">Your Name</a>
+    <nav>
+        <a href="index.html">Gallery</a>
+        <a href="works.html" aria-current="page">Works</a>
+        <a href="commissions.html">Commissions</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Works</h1>
+    <p class="lead">Longer projects: manga, websites and more.</p>
+
+    <!-- FILTER BUTTONS. data-show must match the data-group of the projects below. Keep the "all" button. -->
+    <div class="switcher">
+      <button type="button" data-show="all" aria-pressed="true">All</button>
+      <button type="button" data-show="manga">Manga</button>
+      <button type="button" data-show="websites">Websites</button>
+      <button type="button" data-show="other">Other</button>
+    </div>
+
+    <!-- ADD A PROJECT: copy a whole article block below, paste it, and edit.
+         Change data-group to manga, websites, other, or a new name (then add a matching button above).
+         Delete any fact line you don't need, or add your own (Client, Team, Chapters...).
+         The cover image and the extra pictures are optional. Delete them if you don't have any. -->
+
+    <article class="work" data-group="manga">
+      <img class="art" src="images/works/manga-cover.svg" alt="Cover of Your Manga Title" width="600" height="800" loading="lazy">
+      <div>
+        <h2>Your Manga Title</h2>
+        <dl class="facts">
+          <dt>Type</dt><dd>Manga</dd>
+          <dt>Year</dt><dd>2026</dd>
+          <dt>Status</dt><dd>Ongoing, 12 chapters</dd>
+          <dt>Role</dt><dd>Story and art</dd>
+          <dt>Made with</dt><dd>Clip Studio Paint</dd>
+        </dl>
+        <p>Two or three sentences about the story, who it's for, and where it stands.</p>
+        <p class="links">
+          <a href="#">Read online</a>
+          <a href="#">Buy a copy</a>
+        </p>
+        <div class="work-images">
+          <img class="art" src="images/sketches/example-2.svg" alt="Page from Your Manga Title" width="800" height="800" loading="lazy">
+          <img class="art" src="images/sketches/example-1.svg" alt="Page from Your Manga Title" width="800" height="1000" loading="lazy">
+        </div>
+      </div>
+    </article>
+
+    <article class="work" data-group="websites">
+      <img class="art" src="images/works/website-screenshot.svg" alt="Screenshot of Your Website Project" width="1000" height="625" loading="lazy">
+      <div>
+        <h2>Your Website Project</h2>
+        <dl class="facts">
+          <dt>Type</dt><dd>Website</dd>
+          <dt>Year</dt><dd>2025</dd>
+          <dt>Role</dt><dd>Design and development</dd>
+          <dt>Made with</dt><dd>HTML, CSS, JavaScript</dd>
+        </dl>
+        <p>What you built, who it was for, and what you learned.</p>
+        <p class="links">
+          <a href="#">Visit site</a>
+          <a href="#">Source code</a>
+        </p>
+      </div>
+    </article>
+
+    <article class="work" data-group="other">
+      <div>
+        <h2>Another Project</h2>
+        <dl class="facts">
+          <dt>Type</dt><dd>Zine</dd>
+          <dt>Year</dt><dd>2024</dd>
+        </dl>
+        <p>Projects don't need pictures. This one has none.</p>
+      </div>
+    </article>
+  </main>
+
+  <!-- FOOTER. Same on every page. Delete the sites you don't use, add new ones by copying a line. -->
+  <footer class="site-footer">
+    <ul class="socials">
+      <li><a href="https://instagram.com/yourname" rel="me noopener">Instagram</a></li>
+      <li><a href="https://x.com/yourname" rel="me noopener">X</a></li>
+      <li><a href="https://bsky.app/profile/yourname" rel="me noopener">Bluesky</a></li>
+      <li><a href="https://yourname.tumblr.com" rel="me noopener">Tumblr</a></li>
+      <li><a href="https://www.pixiv.net/users/0000" rel="me noopener">Pixiv</a></li>
+      <li><a href="https://www.artstation.com/yourname" rel="me noopener">ArtStation</a></li>
+      <li><a href="https://www.deviantart.com/yourname" rel="me noopener">DeviantArt</a></li>
+      <li><a href="https://youtube.com/@yourname" rel="me noopener">YouTube</a></li>
+      <li><a href="https://ko-fi.com/yourname" rel="me noopener">Ko-fi</a></li>
+      <li><a href="https://patreon.com/yourname" rel="me noopener">Patreon</a></li>
+      <li><a href="https://github.com/SoCyncl" rel="me noopener">GitHub</a></li>
+      <li><a href="mailto:you@example.com">Email</a></li>
+    </ul>
+    <p>&copy; 2026 Your Name. All artwork is mine; please ask before reposting.</p>
+  </footer>
+
+  <script src="scripts/switcher.js"></script>
+  <script src="scripts/lightbox.js"></script>
+</body>
+</html>

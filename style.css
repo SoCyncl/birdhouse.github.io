@@ -1,119 +1,91 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
-/* Removing this will mess with element sizing for the whole site*/
-* {
-  box-sizing: border-box;
+:root { --bg: #fff; --ink: #111; --muted: #666; --line: #ddd; color-scheme: light dark; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #111; --ink: #eee; --muted: #999; --line: #333; }
 }
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; background: var(--bg); color: var(--ink); font: 1rem/1.6 system-ui, sans-serif; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+h1, h2 { font-weight: 600; line-height: 1.2; margin: 0 0 1rem; }
+h1 { font-size: 1.75rem; }
+h2 { font-size: 1.2rem; margin-top: 2.5rem; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 
-body,
-html {
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif; /* change the main font of the site here*/
-}
+/* header */
+.site-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .5rem 2rem; padding: 1.25rem; border-bottom: 1px solid var(--line); }
+.brand { font-weight: 600; font-size: 1.1rem; text-decoration: none; }
+.site-header nav { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; }
+.site-header nav a { color: var(--muted); text-decoration: none; }
+.site-header nav a:hover { color: var(--ink); }
+.site-header nav a[aria-current="page"] { color: var(--ink); text-decoration: underline; text-underline-offset: .3em; }
 
-html {
-  scroll-behavior: smooth;
-}
+main { flex: 1; width: 100%; max-width: 1200px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+main.narrow { max-width: 680px; }
+.lead { color: var(--muted); }
 
-/* General Styling*/
-#header {
-  /* Color and spacing */
-  background-color: black;
-  color: white;
-  padding: 20px;
-  /* Code below creates the sticky header, if you don't like that then delete this */
-  position: sticky;
-  top: 0;
-  width: 100%;
-}
+/* tabs and filters (centered, plain text) */
+.switcher { display: flex; justify-content: center; flex-wrap: wrap; gap: .25rem 2rem; margin: 0 0 2rem; }
+.switcher button { background: none; border: 0; padding: .25rem 0; font: inherit; color: var(--muted); cursor: pointer; }
+.switcher button:hover { color: var(--ink); }
+.switcher button[aria-pressed="true"] { color: var(--ink); text-decoration: underline; text-underline-offset: .3em; }
 
-#header h1 {
-  text-align: center;
-}
+/* galleries */
+.gallery { columns: 3 260px; column-gap: 1rem; }
+.gallery figure { break-inside: avoid; margin: 0 0 1rem; }
+.art { cursor: zoom-in; }
+figcaption { padding-top: .4rem; font-size: .85rem; }
+figcaption span { display: block; color: var(--muted); }
 
-/* This is only spacing for the navigation links, don't edit unless you want to change that*/
-#navLinks {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  width: 100%;
-}
+/* works */
+.work { display: grid; grid-template-columns: minmax(0, 260px) 1fr; gap: 1.5rem; align-items: start; padding: 2rem 0; border-top: 1px solid var(--line); }
+.work:not(:has(> img)) { grid-template-columns: 1fr; }
+.work h2 { margin: 0 0 .75rem; }
+.facts { display: grid; grid-template-columns: max-content 1fr; gap: .15rem 1rem; margin: 0 0 1rem; }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; }
+.links { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; }
+.work-images { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1rem; }
+.work-images img { width: 140px; }
 
-/* to change the style of the navigation links, edit this:*/
-#navLinks a {
-  color: #bdbdbd;
-  /* transition makes it so the link doesn't instantly change on hover. you can remove
-  this or play with the timing. This is especially useful if you're changing the size or
-  saturation of elements */
-  transition: all 0.2s ease-out;
-}
+/* about */
+.about-top { display: grid; grid-template-columns: minmax(0, 300px) 1fr; gap: 2rem; align-items: start; }
+.about-top:not(:has(> img)) { grid-template-columns: 1fr; }
+.intro { font-size: 1.2rem; margin-top: 0; }
+.timeline { display: grid; grid-template-columns: 5rem 1fr; gap: .4rem 1rem; margin: 0; }
+.timeline dt { color: var(--muted); }
+.timeline dd { margin: 0; }
 
-#navLinks a:hover {
-  color: white;
-  /* You can also do other things here, like make it bigger if you want:
-  transform: scale(120%);*/
-}
+/* commissions and contact */
+.examples { display: flex; flex-wrap: wrap; gap: .75rem; }
+.examples img { width: 180px; }
+form { display: grid; gap: 1rem; margin-top: 1.25rem; }
+label { display: grid; gap: .3rem; font-size: .9rem; color: var(--muted); }
+input, textarea, select { font: inherit; color: var(--ink); background: transparent; border: 1px solid var(--line); padding: .55rem .7rem; }
+select option { color: #111; }
+form button { justify-self: start; font: inherit; color: var(--ink); background: none; border: 1px solid var(--ink); padding: .5rem 1.25rem; cursor: pointer; }
+form button:hover { background: var(--ink); color: var(--bg); }
 
-.main {
-  padding: 0em 2em 1em 2em;
-  margin: 0 auto; /* centers the main content */
-  background-color: white;
-}
+/* footer */
+.site-footer { padding: 2rem 1.25rem; border-top: 1px solid var(--line); text-align: center; }
+.socials { display: flex; justify-content: center; flex-wrap: wrap; gap: .25rem 1.5rem; list-style: none; margin: 0 0 1rem; padding: 0; }
+.site-footer p { margin: 0; color: var(--muted); font-size: .85rem; }
 
-hr {
-  margin: 2em 0;
-}
+/* viewer */
+.lightbox { border: 0; padding: 0; width: 100vw; height: 100vh; max-width: none; max-height: none; background: rgba(0, 0, 0, .93); color: #fff; }
+.lightbox::backdrop { background: none; }
+.lightbox figure { margin: 0; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 3.5rem 4rem 1.5rem; }
+.lightbox img { max-width: 100%; max-height: calc(100vh - 9rem); object-fit: contain; }
+.lightbox figcaption { margin-top: 1rem; max-width: 60ch; text-align: center; color: #ddd; }
+.lightbox figcaption span { color: #999; }
+.lightbox button { position: absolute; background: none; border: 0; color: #fff; font-size: 2.5rem; line-height: 1; padding: .5rem 1rem; cursor: pointer; }
+.lb-close { top: .5rem; right: .75rem; }
+.lb-prev { left: .5rem; top: 50%; transform: translateY(-50%); }
+.lb-next { right: .5rem; top: 50%; transform: translateY(-50%); }
+.lightbox.single .lb-prev, .lightbox.single .lb-next { display: none; }
 
-#footer {
-  text-align: center;
-  padding: 15px;
-}
-
-/* Page specific */
-.textPage {
-  max-width: 800px; /*You can remove or not use this, I just think it looks better on bigger windows */
-}
-
-/* Touching any CSS below this can break the gallery. Proceed with caution */
-.gallery {
-  padding-top: 1em;
-  /* base number of columns, can make this 1 to ?? at bigger numbers it'll look funny 
-     if you edit this, you may want to update the columns in the mobile sizing starting on line 105
-  */
-  columns: auto 3;
-  text-align: center;
-}
-
-.gallery img {
-  border: 1px solid black; /* You can remove the border if you want */
-  width: 100%;
-}
-
-figure {
-  display: inline-block;
-  margin: 0;
-  margin-bottom: 15px;
-}
-
-.spotlightImage {
-  display: block;
-  margin: 0 auto;
-}
-
-/* Below changes the number of columns in the gallery for smaller screens
-   If you changed the column number on line 85, you might have to edit it here too
-   (it's not exactly mobile and tablet sizing)
-    */
-@media only screen and (max-width: 800px) {
-  .gallery {
-    columns: auto 2;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .gallery {
-    columns: auto 1;
-  }
+@media (max-width: 640px) {
+  .work, .about-top { grid-template-columns: 1fr; }
+  .lightbox figure { padding: 3.5rem 1rem 1rem; }
 }

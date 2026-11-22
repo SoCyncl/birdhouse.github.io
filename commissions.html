@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name – Commissions</title>
+  <meta name="description" content="Commission info, process and request form.">
+  <meta property="og:title" content="Your Name – Commissions">
+  <meta property="og:description" content="Commission info, process and request form.">
+  <!-- Link previews (Discord, iMessage, etc.) need a full web address and a jpg or png. Change both. -->
+  <meta property="og:image" content="https://YOUR-SITE-URL/images/illustrations/your-best-piece.jpg">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐦</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER. This is the same on every page: change your name or the links here, then copy it to the other pages.
+       Only the link marked aria-current="page" changes from page to page. -->
+  <header class="site-header">
+    <a class="brand" href="index.html">Your Name</a>
+    <nav>
+        <a href="index.html">Gallery</a>
+        <a href="works.html">Works</a>
+        <a href="commissions.html" aria-current="page">Commissions</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="narrow">
+    <h1>Commissions</h1>
+    <!-- Edit this line when your slots open or fill up -->
+    <p class="status"><strong>Status: open.</strong> Taking 3 more slots this month.</p>
+
+    <h2>What I offer</h2>
+    <ul>
+      <li>Illustration: from $0</li>
+      <li>Character design: from $0</li>
+      <li>Manga pages: from $0 per page</li>
+      <li>Websites: quote on request</li>
+    </ul>
+
+    <!-- Example work. Any image with class="art" opens in the viewer. -->
+    <p class="examples">
+      <img class="art" src="images/illustrations/example-3.svg" alt="Example commission" width="800" height="800" loading="lazy">
+      <img class="art" src="images/illustrations/example-2.svg" alt="Example commission" width="1000" height="700" loading="lazy">
+    </p>
+
+    <h2>How it works</h2>
+    <ol>
+      <li>Send the form below with as much detail as you can.</li>
+      <li>I reply within a few days with a quote and timeline.</li>
+      <li>After you approve, I send a sketch for feedback.</li>
+      <li>Final payment, then the finished files.</li>
+    </ol>
+
+    <h2>Terms</h2>
+    <p>Add usage rights, revision limits, payment methods and refund policy here.</p>
+
+    <h2>Request a commission</h2>
+    <!-- Create a form at formspree.io and paste its ID over YOUR_COMMISSION_FORM_ID -->
+    <form action="https://formspree.io/f/YOUR_COMMISSION_FORM_ID" method="POST">
+      <input type="hidden" name="_subject" value="New commission request">
+      <label>Name <input name="name" required autocomplete="name"></label>
+      <label>Email <input type="email" name="email" required autocomplete="email"></label>
+      <label>Type of commission
+        <select name="type" required>
+          <option value="">Choose one</option>
+          <option>Illustration</option>
+          <option>Character design</option>
+          <option>Manga pages</option>
+          <option>Website</option>
+          <option>Something else</option>
+        </select>
+      </label>
+      <label>Budget <input name="budget" placeholder="e.g. $100 to $200"></label>
+      <label>Deadline (if any) <input name="deadline"></label>
+      <label>Describe what you want <textarea name="details" rows="6" required></textarea></label>
+      <label>Reference links <input name="references" placeholder="Links to images or examples"></label>
+      <button type="submit">Send request</button>
+    </form>
+  </main>
+
+  <!-- FOOTER. Same on every page. Delete the sites you don't use, add new ones by copying a line. -->
+  <footer class="site-footer">
+    <ul class="socials">
+      <li><a href="https://instagram.com/yourname" rel="me noopener">Instagram</a></li>
+      <li><a href="https://x.com/yourname" rel="me noopener">X</a></li>
+      <li><a href="https://bsky.app/profile/yourname" rel="me noopener">Bluesky</a></li>
+      <li><a href="https://yourname.tumblr.com" rel="me noopener">Tumblr</a></li>
+      <li><a href="https://www.pixiv.net/users/0000" rel="me noopener">Pixiv</a></li>
+      <li><a href="https://www.artstation.com/yourname" rel="me noopener">ArtStation</a></li>
+      <li><a href="https://www.deviantart.com/yourname" rel="me noopener">DeviantArt</a></li>
+      <li><a href="https://youtube.com/@yourname" rel="me noopener">YouTube</a></li>
+      <li><a href="https://ko-fi.com/yourname" rel="me noopener">Ko-fi</a></li>
+      <li><a href="https://patreon.com/yourname" rel="me noopener">Patreon</a></li>
+      <li><a href="https://github.com/SoCyncl" rel="me noopener">GitHub</a></li>
+      <li><a href="mailto:you@example.com">Email</a></li>
+    </ul>
+    <p>&copy; 2026 Your Name. All artwork is mine; please ask before reposting.</p>
+  </footer>
+
+  <script src="scripts/lightbox.js"></script>
+</body>
+</html>

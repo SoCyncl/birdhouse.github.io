@@ -1,6 +1,6 @@
 :root {
   --bg: #fff; --ink: #111; --muted: #666; --line: #ddd; color-scheme: light dark;
-  /* Space between the banner and the gallery. Make it bigger or smaller here. */
+
   --header-gap: 5rem;
   /* Header picture. Leave --header-image as none for a plain header. To use one, change it to
      url("images/header.jpg") (path is relative to this style.css, use your own file name).
@@ -9,9 +9,7 @@
   --header-image-opacity: 0.2;   /* 0 = invisible, 1 = full strength. Try 0.1 to 0.35. */
   --header-fade: 10rem;          /* how tall the fade-out at the bottom is. Bigger = softer. */
   --header-image-position: center;
-  /* Header icon. It floats on top of the banner, so changing its size never changes the header's height.
-     The banner starts --icon-space below the top; any part of the icon taller than that overlaps the banner.
-     Bigger --icon-size = more overlap. Bigger --icon-space = more room above the banner (taller header). */
+
   --icon-size: 160px;
   --icon-space: 110px;
   --banner-width: 500px;
@@ -103,7 +101,7 @@ form button:hover { background: var(--ink); color: var(--bg); }
 .site-footer p { margin: 0; color: var(--muted); font-size: .85rem; }
 
 /* back to top (bottom right, appears after the banner scrolls away) */
-.to-top { position: fixed; right: max(1rem, env(safe-area-inset-right)); bottom: max(1rem, env(safe-area-inset-bottom)); z-index: 10; width: clamp(48px, 12vw, 72px); aspect-ratio: 1; padding: 0; border: 0; background: none; cursor: pointer; opacity: 0; visibility: hidden; transition: opacity .2s, visibility .2s; }
+.to-top { position: fixed; right: max(1rem, env(safe-area-inset-right)); bottom: max(1rem, env(safe-area-inset-bottom)); z-index: 10; width: clamp(48px, 12vw, 180px); aspect-ratio: 1; padding: 0; border: 0; background: none; cursor: pointer; opacity: 0; visibility: hidden; transition: opacity .2s, visibility .2s; }
 .to-top.visible { opacity: 1; visibility: visible; }
 .to-top img { position: absolute; inset: 0; width: 100%; height: 100%; transition: opacity .15s; }
 .to-top .hover { opacity: 0; }

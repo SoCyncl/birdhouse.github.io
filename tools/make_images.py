@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Turn your original artwork into web-sized images and write the HTML to paste into your gallery.
 
 Put originals in   originals/<gallery>/   for example  originals/sketches/My Drawing.png

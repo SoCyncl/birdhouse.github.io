@@ -3,117 +3,133 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name – Gallery</title>
-  <meta name="description" content="Illustrations, sketches and proof of concept work.">
-  <meta property="og:title" content="Your Name – Gallery">
-  <meta property="og:description" content="Illustrations, sketches and proof of concept work.">
-  <!-- Link previews (Discord, iMessage, etc.) need a full web address and a jpg or png. Change both. -->
-  <meta property="og:image" content="https://YOUR-SITE-URL/images/illustrations/your-best-piece.jpg">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐦</text></svg>">
+  <title>C Y N C L . A R T</title>
+  <meta name="description" content="Illustrator and Writer.">
+  <meta property="og:title" content="C Y N C L . A R T">
+  <meta property="og:description" content="Illustrator and Writer.">
+
+  <meta property="og:image" content="https://cyncl.art/images/cover-image.png">
+  <link rel="icon" href="birdhouse.ico">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER. This is the same on every page: change your name or the links here, then copy it to the other pages.
-       Only the link marked aria-current="page" changes from page to page. -->
+
+  <div class="top-bar">
+    <p class="top-note">Commissions: open</p>
+    <ul class="socials icons-only">
+      <li><a class="social" data-icon="instagram" href="https://www.instagram.com/cyncl.art" rel="me noopener"><span>Instagram</span></a></li>
+      <li><a class="social" data-icon="x" href="https://x.com/Cyncl_art" rel="me noopener"><span>Twitter</span></a></li>
+      <li><a class="social" data-icon="youtube" href="https://youtube.com/@cyncl.art" rel="me noopener"><span>YouTube</span></a></li>
+      <li><a class="social" data-icon="email" href="cyncl.art@gmail.com"><span>Email</span></a></li>
+      <li><a class="social" data-icon="tiktok" href="https://www.tiktok.com/@cyncl.art"><span>Tiktok</span></a></li>
+    </ul>
+  </div>
+
+
   <header class="site-header">
-    <!-- Icon: replace images/icon.svg with your own square image (shows at 64px).
-         Banner: replace images/banner.svg with your 1000x500 image. If you use a png or jpg, change the file name.
-         Put your name in the alt text so screen readers and search engines can read it. -->
+
     <a class="brand" href="index.html">
-      <img class="logo" src="images/icon.svg" alt="" width="64" height="64">
-      <img class="banner" src="images/banner.svg" alt="Your Name" width="1000" height="500">
+      <img class="logo" src="images/icon.png" alt="" width="400" height="400">
+      <img class="banner" src="images/banner.png" alt="Your Name" width="1000" height="500">
     </a>
     <nav>
         <a href="index.html" aria-current="page">Gallery</a>
-        <a href="works.html">Works</a>
-        <a href="commissions.html">Commissions</a>
+        <!--<a href="works.html">Works</a> -->
+        <!--<a href="commissions.html">Commissions</a> -->
         <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <!--<a href="contact.html">Contact</a> -->
     </nav>
   </header>
 
   <main>
     <h1 class="visually-hidden">Gallery</h1>
 
-    <!-- TABS. Each data-show must match the data-group of a section below.
-         To add a new gallery: add a button here and a new section with the same name. -->
     <div class="switcher">
       <button type="button" data-show="illustrations" aria-pressed="true">Illustrations</button>
       <button type="button" data-show="sketches">Sketches</button>
       <button type="button" data-show="proof-of-concept">Proof of concept</button>
     </div>
 
-    <!-- ADD A PIECE: copy the figure block below and paste it anywhere inside a gallery section.
-         Change the file name, alt text (describe the picture) and caption.
-         width and height are the image's pixel size. Any size works; they just stop the page jumping while it loads.
-         The class "art" is what makes a picture open in the big viewer. You can use it on any image on any page.
-         Optional: add data-full="images/illustrations/big-version.jpg" to the img to show a larger file in the viewer.
-
-      <figure>
-        <img class="art" src="images/illustrations/FILE.jpg" alt="Describe the picture" width="800" height="1000" loading="lazy">
-        <figcaption>Title <span>2026, medium</span></figcaption>
-      </figure>
-    -->
-
     <section class="gallery" data-group="illustrations">
       <figure>
-        <img class="art" src="images/illustrations/example-1.svg" alt="Example illustration" width="800" height="1000" loading="lazy">
-        <figcaption>Illustration title <span>2026, digital</span></figcaption>
+        <img class="art" src="images/illustrations/herb-magic.png" alt="Herb Magic the Gathering illustration" width="2000" height="2000" loading="lazy">
+        <figcaption>Herb, The Mask Mager - MTG <span>2026, digital</span></figcaption>
       </figure>
       <figure>
-        <img class="art" src="images/illustrations/example-2.svg" alt="Example illustration" width="1000" height="700" loading="lazy">
-        <figcaption>Illustration title <span>2026, digital</span></figcaption>
+        <img class="art" src="images/illustrations/liorah-magic.png" alt="Liorah Magic the Gathering illustration" width="1500" height="2000" loading="lazy">
+        <figcaption>Liorah - MTG<span>2026, digital</span></figcaption>
       </figure>
       <figure>
-        <img class="art" src="images/illustrations/example-3.svg" alt="Example illustration" width="800" height="800" loading="lazy">
-        <figcaption>Illustration title <span>2025, digital</span></figcaption>
+        <img class="art" src="images/illustrations/rotcio-magic.png" alt="Rotcio Magic the Gathering illustration" width="1500" height="2000" loading="lazy">
+        <figcaption>Rotcio - MTG <span>2026, digital</span></figcaption>
+      </figure>
+      <figure>
+        <img class="art" src="images/illustrations/blobert-magic.png" alt="Blobert Magic the Gathering illustration" width="2000" height="2000" loading="lazy">
+        <figcaption>Blobert, The Anomaly - MTG <span>2026, digital</span></figcaption>
+      </figure>
+      <figure>
+        <img class="art" src="images/illustrations/holly-magic.png" alt="Holly Magic the Gathering illustration" width="1500" height="2000" loading="lazy">
+        <figcaption>Holly, Loyal Steed - MTG <span>2026, digital</span></figcaption>
       </figure>
     </section>
+
+<!-- ==================== Sketches ================================ -->
 
     <section class="gallery" data-group="sketches">
       <figure>
-        <img class="art" src="images/sketches/example-1.svg" alt="Example sketch" width="800" height="1000" loading="lazy">
+        <img class="art" src="images/sketches/herb-concept.png" alt="Herb concept art" width="3000" height="3000" loading="lazy">
         <figcaption>Sketch title <span>2026, pencil</span></figcaption>
-      </figure>
-      <figure>
-        <img class="art" src="images/sketches/example-2.svg" alt="Example sketch" width="800" height="800" loading="lazy">
-        <figcaption>Sketch title <span>2025, ink on paper</span></figcaption>
       </figure>
     </section>
 
+<!-- ==================== Proof of concepts ================================ -->
+
     <section class="gallery" data-group="proof-of-concept">
       <figure>
-        <img class="art" src="images/proof-of-concept/example-1.svg" alt="Example concept" width="1000" height="700" loading="lazy">
-        <figcaption>Concept title <span>2026, what this concept was testing</span></figcaption>
+        <img class="art" src="images/proof-of-concept/alice.png" alt="Alice O'hare" width="3200" height="3200" loading="lazy">
+        <figcaption>Alice O'hare<span>2026, Characters for a one shot story</span></figcaption>
       </figure>
       <figure>
-        <img class="art" src="images/proof-of-concept/example-2.svg" alt="Example concept" width="800" height="1000" loading="lazy">
-        <figcaption>Concept title <span>2026, what this concept was testing</span></figcaption>
+        <img class="art" src="images/proof-of-concept/cinis-helm.png" alt="Cinnis with Helmet" width="3200" height="3200" loading="lazy">
+        <figcaption>Cinnis Full Armor<span>2026, Characters for a one shot story</span></figcaption>
+      </figure>
+      <figure>
+        <img class="art" src="images/proof-of-concept/cinis-no-helm.png" alt="Cinnis no helmet" width="3200" height="3200" loading="lazy">
+        <figcaption>Cinnis No Helmet<span>2026, Characters for a one shot story</span></figcaption>
+      </figure>
+      <figure>
+        <img class="art" src="images/proof-of-concept/peanut.png" alt="Peanut" width="3200" height="3200" loading="lazy">
+        <figcaption>Peanut Odunne<span>2026, Characters for a one shot story</span></figcaption>
+      </figure>
+      <figure>
+        <img class="art" src="images/proof-of-concept/ira.png" alt="ira the Strega" width="3200" height="3200" loading="lazy">
+        <figcaption>Ira, The Witness<span>2026, Characters "A land of leaves and flowers" Short story</span></figcaption>
       </figure>
     </section>
   </main>
 
-  <!-- FOOTER. Same on every page. Delete the sites you don't use, add new ones by copying a line. -->
+
   <footer class="site-footer">
-    <ul class="socials">
-      <li><a href="https://instagram.com/yourname" rel="me noopener">Instagram</a></li>
-      <li><a href="https://x.com/yourname" rel="me noopener">X</a></li>
-      <li><a href="https://bsky.app/profile/yourname" rel="me noopener">Bluesky</a></li>
-      <li><a href="https://yourname.tumblr.com" rel="me noopener">Tumblr</a></li>
-      <li><a href="https://www.pixiv.net/users/0000" rel="me noopener">Pixiv</a></li>
-      <li><a href="https://www.artstation.com/yourname" rel="me noopener">ArtStation</a></li>
-      <li><a href="https://www.deviantart.com/yourname" rel="me noopener">DeviantArt</a></li>
-      <li><a href="https://youtube.com/@yourname" rel="me noopener">YouTube</a></li>
-      <li><a href="https://ko-fi.com/yourname" rel="me noopener">Ko-fi</a></li>
-      <li><a href="https://patreon.com/yourname" rel="me noopener">Patreon</a></li>
-      <li><a href="https://github.com/SoCyncl" rel="me noopener">GitHub</a></li>
-      <li><a href="mailto:you@example.com">Email</a></li>
+    <ul class="socials with-labels">
+      <li><a class="social" data-icon="instagram" href="https://www.instagram.com/cyncl.art" rel="me noopener"><span>Instagram</span></a></li>
+      <li><a class="social" data-icon="x" href="https://x.com/Cyncl_art" rel="me noopener"><span>Twitter</span></a></li>
+      <li><a class="social" data-icon="youtube" href="https://youtube.com/@cyncl.art" rel="me noopener"><span>YouTube</span></a></li>
+      <li><a class="social" data-icon="email" href="cyncl.art@gmail.com"><span>Email</span></a></li>
+      <li><a class="social" data-icon="tiktok" href="https://www.tiktok.com/@cyncl.art"><span>Tiktok</span></a></li>
     </ul>
-    <p>&copy; 2026 Your Name. All artwork is mine; please ask before reposting.</p>
+    <p>&copy; 2026 Cyncl.Art | All artwork is mine; please ask before reposting.</p>
   </footer>
+
+ 
+  <button class="to-top" type="button" aria-label="Back to top">
+    <img class="normal" src="images/to-top.png" alt="" width="600" height="600">
+    <img class="hover" src="images/to-top-hover.png" alt="" width="600" height="600">
+  </button>
 
   <script src="scripts/switcher.js"></script>
   <script src="scripts/lightbox.js"></script>
+  <script src="scripts/icons.js"></script>
+  <script src="scripts/to-top.js"></script>
 </body>
 </html>

@@ -14,14 +14,35 @@
 </head>
 <body>
 
+  <!-- TOP BAR. Same on every page. A short note on the left, your social icons on the right.
+       One line per site: delete the ones you don't use. data-icon picks the icon (names are listed in scripts/icons.js). -->
+  <div class="top-bar">
+    <p class="top-note">Commissions: open</p>
+    <ul class="socials icons-only">
+      <li><a class="social" data-icon="instagram" href="https://instagram.com/yourname" rel="me noopener"><span>Instagram</span></a></li>
+      <li><a class="social" data-icon="x" href="https://x.com/yourname" rel="me noopener"><span>X (Twitter)</span></a></li>
+      <li><a class="social" data-icon="bluesky" href="https://bsky.app/profile/yourname" rel="me noopener"><span>Bluesky</span></a></li>
+      <li><a class="social" data-icon="tumblr" href="https://yourname.tumblr.com" rel="me noopener"><span>Tumblr</span></a></li>
+      <li><a class="social" data-icon="pixiv" href="https://www.pixiv.net/users/0000" rel="me noopener"><span>Pixiv</span></a></li>
+      <li><a class="social" data-icon="artstation" href="https://www.artstation.com/yourname" rel="me noopener"><span>ArtStation</span></a></li>
+      <li><a class="social" data-icon="deviantart" href="https://www.deviantart.com/yourname" rel="me noopener"><span>DeviantArt</span></a></li>
+      <li><a class="social" data-icon="youtube" href="https://youtube.com/@yourname" rel="me noopener"><span>YouTube</span></a></li>
+      <li><a class="social" data-icon="kofi" href="https://ko-fi.com/yourname" rel="me noopener"><span>Ko-fi</span></a></li>
+      <li><a class="social" data-icon="patreon" href="https://patreon.com/yourname" rel="me noopener"><span>Patreon</span></a></li>
+      <li><a class="social" data-icon="github" href="https://github.com/SoCyncl" rel="me noopener"><span>GitHub</span></a></li>
+      <li><a class="social" data-icon="email" href="mailto:you@example.com"><span>Email</span></a></li>
+    </ul>
+  </div>
+
   <!-- HEADER. This is the same on every page: change your name or the links here, then copy it to the other pages.
        Only the link marked aria-current="page" changes from page to page. -->
   <header class="site-header">
-    <!-- Icon: replace images/icon.svg with your own square image (shows at 64px).
-         Banner: replace images/banner.svg with your 1000x500 image. If you use a png or jpg, change the file name.
-         Put your name in the alt text so screen readers and search engines can read it. -->
+    <!-- Icon: images/icon.png (square). It sits on top of the banner and never changes the header's height.
+         Its size and how far it overlaps the banner are set at the top of style.css (--icon-size, --icon-space).
+         Banner: images/banner.svg, your 1000x500 image. If yours is a png or jpg, change the file name.
+         Put your name in the banner's alt text so screen readers and search engines can read it. -->
     <a class="brand" href="index.html">
-      <img class="logo" src="images/icon.svg" alt="" width="64" height="64">
+      <img class="logo" src="images/icon.png" alt="" width="400" height="400">
       <img class="banner" src="images/banner.svg" alt="Your Name" width="1000" height="500">
     </a>
     <nav>
@@ -87,25 +108,35 @@
     </form>
   </main>
 
-  <!-- FOOTER. Same on every page. Delete the sites you don't use, add new ones by copying a line. -->
+  <!-- FOOTER. Same on every page. Its own list of links (icon and name). Delete or add lines the same way as the top bar. -->
   <footer class="site-footer">
-    <ul class="socials">
-      <li><a href="https://instagram.com/yourname" rel="me noopener">Instagram</a></li>
-      <li><a href="https://x.com/yourname" rel="me noopener">X</a></li>
-      <li><a href="https://bsky.app/profile/yourname" rel="me noopener">Bluesky</a></li>
-      <li><a href="https://yourname.tumblr.com" rel="me noopener">Tumblr</a></li>
-      <li><a href="https://www.pixiv.net/users/0000" rel="me noopener">Pixiv</a></li>
-      <li><a href="https://www.artstation.com/yourname" rel="me noopener">ArtStation</a></li>
-      <li><a href="https://www.deviantart.com/yourname" rel="me noopener">DeviantArt</a></li>
-      <li><a href="https://youtube.com/@yourname" rel="me noopener">YouTube</a></li>
-      <li><a href="https://ko-fi.com/yourname" rel="me noopener">Ko-fi</a></li>
-      <li><a href="https://patreon.com/yourname" rel="me noopener">Patreon</a></li>
-      <li><a href="https://github.com/SoCyncl" rel="me noopener">GitHub</a></li>
-      <li><a href="mailto:you@example.com">Email</a></li>
+    <ul class="socials with-labels">
+      <li><a class="social" data-icon="instagram" href="https://instagram.com/yourname" rel="me noopener"><span>Instagram</span></a></li>
+      <li><a class="social" data-icon="x" href="https://x.com/yourname" rel="me noopener"><span>X (Twitter)</span></a></li>
+      <li><a class="social" data-icon="bluesky" href="https://bsky.app/profile/yourname" rel="me noopener"><span>Bluesky</span></a></li>
+      <li><a class="social" data-icon="tumblr" href="https://yourname.tumblr.com" rel="me noopener"><span>Tumblr</span></a></li>
+      <li><a class="social" data-icon="pixiv" href="https://www.pixiv.net/users/0000" rel="me noopener"><span>Pixiv</span></a></li>
+      <li><a class="social" data-icon="artstation" href="https://www.artstation.com/yourname" rel="me noopener"><span>ArtStation</span></a></li>
+      <li><a class="social" data-icon="deviantart" href="https://www.deviantart.com/yourname" rel="me noopener"><span>DeviantArt</span></a></li>
+      <li><a class="social" data-icon="youtube" href="https://youtube.com/@yourname" rel="me noopener"><span>YouTube</span></a></li>
+      <li><a class="social" data-icon="kofi" href="https://ko-fi.com/yourname" rel="me noopener"><span>Ko-fi</span></a></li>
+      <li><a class="social" data-icon="patreon" href="https://patreon.com/yourname" rel="me noopener"><span>Patreon</span></a></li>
+      <li><a class="social" data-icon="github" href="https://github.com/SoCyncl" rel="me noopener"><span>GitHub</span></a></li>
+      <li><a class="social" data-icon="email" href="mailto:you@example.com"><span>Email</span></a></li>
     </ul>
     <p>&copy; 2026 Your Name. All artwork is mine; please ask before reposting.</p>
   </footer>
 
+  <!-- BACK TO TOP BUTTON. Appears after you scroll past the banner. Same on every page.
+       Both pictures are 600x600 (shown at about 64px). Replace images/to-top.svg (normal) and
+       images/to-top-hover.svg (hovered or pressed). If yours are png, change the file names here. -->
+  <button class="to-top" type="button" aria-label="Back to top">
+    <img class="normal" src="images/to-top.svg" alt="" width="600" height="600">
+    <img class="hover" src="images/to-top-hover.svg" alt="" width="600" height="600">
+  </button>
+
   <script src="scripts/lightbox.js"></script>
+  <script src="scripts/icons.js"></script>
+  <script src="scripts/to-top.js"></script>
 </body>
 </html>

@@ -1,7 +1,4 @@
-// Tabs and filter buttons. No URL changes.
-// A button with data-show="sketches" shows every element that has data-group="sketches"
-// and hides the other groups. data-show="all" shows everything.
-// An element can be in several groups: data-group="manga other".
+
 document.querySelectorAll(".switcher").forEach(function (bar) {
   var buttons = Array.from(bar.querySelectorAll("button[data-show]"));
   var items = Array.from(document.querySelectorAll("[data-group]"));

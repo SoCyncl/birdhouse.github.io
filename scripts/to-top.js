@@ -1,4 +1,4 @@
-// Back-to-top button: appears once you've scrolled past the banner, scrolls smoothly to the top when clicked.
+
 (function () {
   function init() {
     var btn = document.querySelector(".to-top");
@@ -23,7 +23,7 @@
       window.scrollTo({ top: 0, behavior: calm ? "auto" : "smooth" });
     });
   }
-  // wait for the page, because the button is added by scripts/layout.js
+  // wait for the page
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
 })();

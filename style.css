@@ -7,7 +7,7 @@
   --icon-space: 110px;
   --banner-width: 500px;
 
-  --page-image: url("images/background.jpg");         
+  --page-image: url("images/banner-header.jpg");         
   --page-image-start: 0.5;             /* opacity at the very top: 0 to 1 */
   --page-image-height: 800px;          /* how far down before it has fully blended away */
   --page-image-position: center top;   /* which part to keep when it's cropped */

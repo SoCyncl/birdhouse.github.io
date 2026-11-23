@@ -15,7 +15,7 @@
   var SOCIALS = [
     ["instagram", "Instagram", "https://www.instagram.com/cyncl.art"],
     ["x",         "Twitter",   "https://x.com/Cyncl_art"],
-    ["youtube",   "YouTube",   "https://youtube.com/@cyncl.art"],
+    ["youtube",   "YouTube",   "https://www.youtube.com/@SoCyncl"],
     ["email",     "Email",     "mailto:cyncl.art@gmail.com"],
     ["tiktok",    "TikTok",    "https://www.tiktok.com/@cyncl.art"]
   ];
